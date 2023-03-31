@@ -1,0 +1,269 @@
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after {
+	clear: both;
+}
+
+@mixin clearfix-full {
+	&:before {
+		@include clearfix;
+	}
+	&:after {
+		@include clearfix;
+		@include clearfix-after
+	}
+}
+// Clear list
+@mixin reset-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+// Reset
+@mixin reset-container {
+	max-width: inherit;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Optional hyphenation
+@mixin hyphens($mode: auto) {
+	word-wrap: break-word;
+	-webkit-hyphens: $mode;
+	-moz-hyphens: $mode;
+	-ms-hyphens: $mode; // IE10+
+	-o-hyphens: $mode;
+	hyphens: $mode;
+}
+
+// .hentry
+@mixin card {
+	@include border-radius;
+	overflow: hidden;
+}
+
+// Placeholder style
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&::-moz-placeholder{
+		@content;
+	}
+	&:-ms-input-placeholder{
+		@content;
+	}
+	&:-moz-placeholder{
+		@content;
+	}
+}
+
+// Triangle
+@mixin triangle($dir, $w, $h, $clr:#ccc) {
+	width: 0;
+	height: 0;
+	border-style: solid;
+
+	@if $dir == top {
+		border-width: 0 $w/2 $h $w/2;
+		border-color: transparent transparent $clr transparent;
+		} @else if $dir == bottom {
+			border-width: $h $w/2 0 $w/2;
+			border-color: $clr transparent transparent transparent;
+			} @else if $dir == left {
+				border-width: $h/2 $w $h/2 0;
+				border-color: transparent $clr transparent transparent;
+				} @else if $dir == right {
+					border-width: $h/2 0 $h/2 $w;
+					border-color: transparent transparent transparent $clr;
+					} @else if $dir == top_left {
+						border-width: $h $w 0 0;
+						border-color: $clr transparent transparent transparent;
+						} @else if $dir == top_right {
+							border-width: 0 $w $h 0;
+							border-color: transparent $clr transparent transparent;
+							} @else if $dir == bottom_right {
+								border-width: 0 0 $h $w;
+								border-color: transparent transparent $clr transparent;
+								} @else if $dir == bottom_left {
+									border-width: $h 0 0 $w;
+									border-color: transparent transparent transparent $clr;
+								}
+							}
+
+// Widgets area selectors
+@mixin full-width-area( $parent-symbol:true ) {
+	@if $parent-symbol {
+		.full-width-header-area &,
+		.after-content-full-width-area & {
+			@content;
+		}
+		} @else {
+			.full-width-header-area,
+			.after-content-full-width-area {
+				@content;
+			}
+		}
+	}
+
+
+// Opacity
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	// IE8 filter
+	$opacity-ie: ($opacity * 100);
+	filter: #{alpha(opacity=$opacity-ie)};
+}
+
+
+
+// Font-awesome icon
+@mixin font-awesome-icon {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: auto;
+}
+
+/* Button */
+@mixin btn {
+	display: inline-block;
+	max-width: 100%;
+	cursor: pointer;
+	text-align: center;
+	white-space: inherit;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	border: $button__border;
+	@include border-radius($button__border-radius);
+	box-shadow: $button__box-shadow;
+	transition: all 0.2s ease;
+}
+
+
+// Resize anything
+@mixin resizable($direction) {
+	resize: $direction; // Options: horizontal, vertical, both
+	overflow: auto; // Per CSS3 UI, `resize` only applies when `overflow` isn't `visible`
+}
+
+// Layout justify content space between
+@mixin space-between-content($child-indent-type: 'margin') {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-left: -$grid-gutter-width/2;
+	margin-right: -$grid-gutter-width/2;
+	@if $child-indent-type=='padding' or $child-indent-type=='margin' {
+		>* {
+			margin-left: $grid-gutter-width/2;
+			margin-right: $grid-gutter-width/2;
+		}
+		} @else {
+			>* {
+				padding-left: $grid-gutter-width/2;
+				padding-right: $grid-gutter-width/2;
+			}
+		}
+	}
+
+	@mixin contents-area( $parent-symbol:true ) {
+		@if $parent-symbol {
+			.footer-area--fullwidth & {
+				@content;
+			}
+			} @else {
+				.footer-area--fullwidth {
+					@content;
+				}
+			}
+		}
+
+		@mixin sidebars-area( $parent-symbol:true ) {
+			@if $parent-symbol {
+				.sidebar &,
+				.footer-area:not(.footer-area--fullwidth) & {
+					@content;
+				}
+				} @else {
+					.sidebar,
+					.footer-area:not(.footer-area--fullwidth) {
+						@content;
+					}
+				}
+			}
+
+// Custom grid indent
+@mixin grid-indent( $indent: $grid-gutter-width/2, $child-indent-type: 'padding', $child-selector: '> *' ) {
+	margin-left: - $indent;
+	margin-right: - $indent;
+
+	@if $child-indent-type=='padding' or $child-indent-type=='margin' {
+		#{$child-selector} {
+			#{$child-indent-type}-left: $indent;
+			#{$child-indent-type}-right: $indent;
+		}
+		} @else {
+			#{$child-selector} {
+				padding-left: $indent;
+				padding-right: $indent;
+			}
+		}
+	}
+
+
+/*--------------------------------------------------------------
+# Animation
+--------------------------------------------------------------*/
+@keyframes mygrace_spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+// Overlay position
+@mixin overlay-position() {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+@import "transform";
+@import "flex";
+@import "border-radius";

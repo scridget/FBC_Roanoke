@@ -1,0 +1,29 @@
+/**
+ * Titles
+ */
+
+/*     Shopping cart title       */
+.woocommerce-cart .entry-header > .entry-title {
+	font-size: $wc-shopping-cart-title-fz;
+	line-height: $wc-shopping-cart-title-lh;
+	text-align: $wc-shopping-cart-title-ta;
+	margin: $wc-shopping-cart-title-offset;
+	text-transform: $wc-shopping-cart-title-tt;
+}
+
+// Checkout cart
+.woocommerce-checkout .entry-header > .entry-title {
+	font-size: $wc-checkout-cart-title-fz;
+	line-height: $wc-checkout-cart-title-lh;
+	text-align: $wc-checkout-cart-title-ta;
+	margin: $wc-checkout-cart-title-offset;
+	text-transform: $wc-checkout-cart-title-tt;
+}
+// My account
+.woocommerce-account .entry-header > .entry-title {
+	font-size: $wc-my-account-title-fz;
+	line-height: $wc-my-account-title-lh;
+	text-align: $wc-my-account-title-ta;
+	margin: 0 0 30px;
+	text-transform: $wc-my-account-title-tt;
+}

@@ -1,0 +1,16 @@
+/* #Social */
+.social-list a {
+	color: $secondary_text_color;
+}
+
+.social-list a:hover {
+	color: $accent_color;
+}
+
+.social-list .menu-item > a,
+.social-list .menu-item > a:hover {
+	color: $primary_text_color;
+}
+.social-list .menu-item > a:after {
+	background-color: $primary_text_color;
+}

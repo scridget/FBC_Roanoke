@@ -1,0 +1,49 @@
+a {
+	text-decoration: none;
+	transition: all 0.3s ease;
+	&:focus {
+		outline: none;
+	}
+	&:hover,
+	&:active {
+		text-decoration: none;
+	}
+	h1 &, h2 &, h3 &, h4 &, h5 &, h6 & {
+		color: inherit;
+	}
+
+	.site-main p & {
+
+		&[href*="callto:"],
+		&[href*="tel:"],
+		&[href*="mailto:"] {
+			font-weight: inherit;
+		}
+	}
+}
+
+.edit-link {
+	display: block;
+	
+	a {
+		display: inline-block;
+		font-weight: 500;
+    	font-size: 18px;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 6px;
+			margin-top: -3px;
+			width: 15px;
+			height: 9px;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"><path d="M5.958 8.786L0.918 4.772L5.958 0.776V4.376H14.454V5.186H5.958V8.786Z"/></svg>');
+					mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"><path d="M5.958 8.786L0.918 4.772L5.958 0.776V4.376H14.454V5.186H5.958V8.786Z"/></svg>');
+
+			transition: background-color 0.2s ease-out;
+		}
+	}
+}

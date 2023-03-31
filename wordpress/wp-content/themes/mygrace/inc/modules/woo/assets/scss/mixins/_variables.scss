@@ -1,0 +1,159 @@
+$wc-max-columns: 6;
+
+$wc-white-color: #ffffff;
+$wc-gray-color: #E0E0E0;
+$wc-green-color: #27d18b;
+$wc-yellow-color: #fdbc32;
+$wc-red-color: #fd6d75;
+$wc-blue-color: #398ffc;
+$wc-border-color: $wc-gray-color;
+$wc-border-radius: 3px;
+$wc-border: 1px solid $wc-border-color;
+
+// icons
+$wc-list-widget-current-item-icon: '\f00c';
+
+$wc-widget-cart-view-cart-button-icon: '';
+$wc-widget-cart-checkout-button-icon: '';
+
+$wc-tabs-icon: '\f067';
+$wc-tabs-active-icon: '\f068';
+
+$wc-my-account-navigation-icons: (
+		dashboard:'\f007',
+		orders:'\f03b',
+		downloads:'\f019',
+		edit-address:'\f02d',
+		edit-account:'\f085',
+		customer-logout:'\f08b'
+);
+
+$wc-cart-page-table-actions-button-icon: '\f01e';
+$wc-cart-page-calculate-shipping-button-icon: '\f0cb';
+
+$wc-proceed-to-checkout-button-icon: '\f00c';
+
+$wc-add-to-cart-sample-icon: '';
+$wc-add-to-cart-variable-icon: '\f0ad';
+$wc-add-to-cart-loading-icon: '\f110';
+
+$wc-pagination-icon-prev: '\f053';
+$wc-pagination-icon-next: '\f054';
+
+$wc-checkbox-active-icon: '\f00c';
+
+$wc-messages-icon-default: '\f05a';
+$wc-messages-icon-error: '\f071';
+$wc-messages-icon-info: '\f06a';
+
+
+// Labels
+$wc-label-fz: 14px;
+$wc-label-lh: inherit;
+$wc-label-offset: 0 0 4px;
+
+// Prices
+$wc-grid-price-fz: 16px;
+$wc-grid-price-lh: 1;
+$wc-grid-ins-price-fz: $wc-grid-price-fz;
+$wc-grid-del-price-fz: 12px;
+$wc-grid-price-offset: 6px 0 16px 0;
+
+$wc-list-price-fz: $wc-grid-price-fz;
+$wc-list-price-lh: $wc-grid-price-lh;
+$wc-list-ins-price-fz: $wc-list-price-fz;
+$wc-list-del-price-fz: $wc-list-price-fz;
+$wc-list-price-offset: 10px 0;
+
+$wc-sale-price-color: #899296;
+
+// Widgets
+$wc-widget-select-height: 37px;
+$wc-widgets-title-offset: 0 0 23px 0;
+
+$wc-product-list-widget-items-offset: 15px;
+$wc-product-list-widget-price-fz: 20px;
+
+// Single add to cart
+$wc-variations-select-offset: 10px;
+$wc-variations-clear-btn-fz: inherit;
+$wc-variations-clear-btn-lh: inherit;
+
+// Checkout page (pages)
+$wc-proceed-to-checkout-button-fz: 15px;
+$wc-proceed-to-checkout-button-inset: 15px 5px 21px;
+
+$wc-checkout-page-inline-layout: false;
+
+$wc-checkout-page-sub-title-fz: 20px;
+$wc-checkout-page-sub-title-lh: 32px;
+$wc-checkout-page-sub-title-link-fz: 14px;
+
+$wc-checkout-place-order-button-icon: $wc-proceed-to-checkout-button-icon;
+$wc-checkout-place-order-button-inset: $wc-proceed-to-checkout-button-inset;
+
+// Buttons (components)
+$wc-button-indents: 12px 20px;
+$wc-button-border: 1px solid;
+$wc-button-border-radius: $wc-border-radius;
+
+$wc-add-to-cart-with-icon: true;
+
+$wc-add-to-cart-icon-fz: 12px;
+$wc-add-to-cart-icon-lh: 12px;
+
+// Checkbox (components)
+$wc-checkbox-br: $wc-border-radius;
+$wc-checkbox-active-icon-fz: 14px;
+
+// Meta (components)
+$wc-product-meta-fz: 14px;
+
+// Tables (components)
+$wc-table-fz: 16px;
+$wc-table-lh: 24px;
+$wc-table-inset: 5px 0;
+$wc-table-border: 0;
+
+$wc-thead-table-fz: $wc-table-fz;
+$wc-thead-table-lh: $wc-table-lh;
+
+$wc-table-with-inner-border: false;
+$wc-table-with-inner-bottom-border: false;
+$wc-table-with-inner-thead-border: false;
+$wc-table-with-outer-border: false;
+$wc-table-border-color: $wc-border-color;
+
+$wc-product-title-default-lh: 22px;
+$wc-product-title-default-ta: left;
+$wc-product-title-default-tt: none;
+$wc-product-title-default-offset: 8px 0 5px 0;
+
+$wc-shopping-cart-title-fz: 40px;
+$wc-shopping-cart-title-lh: 58px;
+$wc-shopping-cart-title-ta: center;
+$wc-shopping-cart-title-tt: $wc-product-title-default-tt;
+$wc-shopping-cart-title-offset: 8px 0 52px 0;
+
+$wc-checkout-cart-title-fz: $wc-shopping-cart-title-fz;
+$wc-checkout-cart-title-lh: $wc-shopping-cart-title-lh;
+$wc-checkout-cart-title-ta: $wc-shopping-cart-title-ta;
+$wc-checkout-cart-title-tt: $wc-product-title-default-tt;
+$wc-checkout-cart-title-offset: $wc-shopping-cart-title-offset;
+
+$wc-my-account-title-fz: $wc-shopping-cart-title-fz;
+$wc-my-account-title-lh: $wc-shopping-cart-title-lh;
+$wc-my-account-title-ta: $wc-shopping-cart-title-ta;
+$wc-my-account-title-tt: $wc-product-title-default-tt;
+$wc-my-account-title-offset: $wc-shopping-cart-title-offset;
+
+// Messages (components)
+
+$wc-messages-icon-default-color: $wc-white-color;
+$wc-messages-icon-default-bg: $wc-blue-color;
+
+$wc-messages-icon-info-color: $wc-white-color;
+$wc-messages-icon-info-bg: $wc-yellow-color;
+
+$wc-messages-icon-error-color: $wc-white-color;
+$wc-messages-icon-error-bg: $wc-red-color;

@@ -1,0 +1,204 @@
+.comment-navigation {
+	overflow: hidden;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	
+	.nav-previous,
+	.nav-next {
+		width: 100%;
+		word-break: break-word;
+		
+		@include media-breakpoint-up(sm) {
+			width: 50%;
+		}
+
+		> a {
+			position: relative;
+			display: inline-block;
+
+			svg {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	.nav-previous {
+		float: left;
+		padding-right: 15px;
+		a{
+			padding-left: 60px;
+			svg {
+				left: 0;
+			}
+		}
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		padding-left: 15px;
+		margin-top: 25px;
+		
+		@include media-breakpoint-up(sm) {
+			margin-top: 0;
+		}
+		
+		a {
+			padding-right: 60px;
+			svg {
+				right: 0;
+			}
+		}
+	}
+
+}
+
+.site-content{
+	.page-links{
+		margin-top: 60px;
+		font-weight: 500;
+		.post-page-numbers{
+			border-radius: 50%;
+		    width: 41px;
+		    height: 41px;
+		    display: inline-block;
+		    line-height: 41px;
+		    text-align: center;
+		}
+	}
+
+}
+
+
+.comment-navigation {
+	.nav {
+		&-previous {
+			float: left;
+			width: 50%;
+			i {
+				margin-right: 2px;
+			}
+		}
+		&-next {
+			float: right;
+			text-align: right;
+			width: 50%;
+			i {
+				margin-left: 2px;
+			}
+		}
+	}
+}
+.entry-content + .post-navigation{
+	margin-top: 40px;
+}
+.post-navigation {
+	margin-top: 20px;
+	@include media-breakpoint-up(sm) {
+		margin-top: 10px;
+	}
+	.archive-page-links{
+		order: 2;
+		margin: 0 20px;
+		z-index: 1;
+		padding: 10px;
+		svg{
+			width: 28px;
+			height: 28px;
+		}
+	}
+	.nav-links{
+		display: flex;
+	    justify-content: center;
+	    position: relative;
+	    align-items: center;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 52%;
+			transform: translateY(-50%);
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: #F2F2F2;
+		}
+	    .nav{
+	    	&-prev{
+	    		order: 1;
+	    	}
+	    	&-next{
+	    		order: 3;
+	    	}
+	    }
+		.nav-prev,
+		.nav-next{
+			a{
+				display: block;
+				position: relative;
+				padding: 14px 21px;
+				border-radius: 50%;
+				border: 1px solid #EBEBEB;
+				&:before{
+					content: '';
+					position: absolute;
+					top: 3px;
+					left: 3px;
+					right: 3px;
+					bottom: 3px;
+					border: 1px solid #EBEBEB;
+					border-radius: 50%;
+				}	
+				svg{
+					width: 10px;
+					height: 17px;
+				}
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+### Posts List Pagination
+--------------------------------------------------------------*/
+.pagination {
+	margin-top: 60px;
+	margin-bottom: 0;
+	padding: 0;
+	text-align: center;
+	.page-numbers {
+		border-radius: 50%;
+	    width: 41px;
+	    height: 41px;
+	    display: inline-block;
+	    line-height: 41px;
+		&.prev,
+		&.next {
+			width: auto;
+			svg {
+				width: 11px;
+				height: 11px;
+				margin-top: -2px;
+			}
+		}
+
+		&.prev {
+			margin-right: 10px;
+
+			svg {
+				margin-right: 3px;
+			}
+		}
+
+		&.next {
+			margin-left: 10px;
+
+			svg {
+				margin-left: 3px;
+			}
+		}
+	}
+}

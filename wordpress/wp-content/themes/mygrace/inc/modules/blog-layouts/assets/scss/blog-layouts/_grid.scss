@@ -1,0 +1,113 @@
+/*--------------------------------------------------------------
+### Grid Posts List
+--------------------------------------------------------------*/
+
+.posts-list.posts-list--grid {
+    display: flex;
+	margin-right: - $grid-gutter-width/2;
+	margin-left: - $grid-gutter-width/2;
+    flex-flow: row wrap;
+    @include media-breakpoint-down(xs) {
+    	width: 100%;
+	}
+	
+	.grid-item {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: $grid-gutter-width/2;
+		flex-direction: column;
+		margin-right: $grid-gutter-width/2;
+		margin-left: $grid-gutter-width/2;
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 2.2rem;
+		}
+	}
+
+	&.posts-list-3-cols {
+		.grid-item{
+			@include media-breakpoint-up(sm) {
+			    flex: 0 0 calc(100%/2 - #{$grid-gutter-width});
+			    width: calc(100%/2 - #{$grid-gutter-width});
+			    max-width: calc(100%/2 - #{$grid-gutter-width});
+			}
+			@include media-breakpoint-up(md) {
+			    flex: 0 0 calc(100%/3 - #{$grid-gutter-width});
+			    width: calc(100%/3 - #{$grid-gutter-width});
+			    max-width: calc(100%/3 - #{$grid-gutter-width});
+			}
+		}
+	}
+
+	&.posts-list-2-cols{
+		.grid-item{
+			@include media-breakpoint-up(sm) {
+			    flex: 0 0 calc(100%/2 - #{$grid-gutter-width});
+			    width: calc(100%/2 - #{$grid-gutter-width});
+			    max-width: calc(100%/2 - #{$grid-gutter-width});
+			}
+		}
+	}
+
+	.no-thumb{
+		border-bottom: 1px solid #F5F5F5;
+		.posts-list__item-content {
+			display: block;
+			padding: 0 0 18px;
+			position: relative;
+		}
+		& + .no-thumb{
+			margin-bottom: 1.5rem;
+		}
+	}	
+	.sticky-label.type-icon {
+		margin: -3px 8px 0 0;
+	}
+	
+	.post-thumbnail {
+		a{
+			width: 100%;
+		}
+		img {
+			width: 100%;
+			border-radius: 8px;
+		}
+	}
+	.has-thumb{
+		.posts-list__item-content{
+			border: 0;
+			padding: 22px;
+			border-radius: 8px;
+			margin: -54px 10px 0 10px;
+			position: relative;
+			@include media-breakpoint-up(sm) {
+				margin: -54px 33px 0 33px;
+			}
+		}
+	}
+	
+	.entry {
+		&-header {
+			.entry{
+				&-title{
+					margin-top: 0;
+					margin-bottom: 9px;
+				}
+			}
+		}
+		&-content {
+			margin-bottom: 8px;
+		}
+		&-footer {
+			margin: 0;
+			padding: 0;
+			.entry{
+				&-meta{
+					margin-top: 10px;
+					.tags-links{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

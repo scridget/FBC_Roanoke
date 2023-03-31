@@ -1,0 +1,143 @@
+.comments {
+	&-area {
+		position: relative;
+		margin-top: 71px;
+		.elementor-page.position-fullwidth & {
+			margin-top: 50px;
+		}
+	}
+
+	&-title {
+		margin-top: 0;
+		margin-bottom: 13px;
+
+		&.h4-style {
+			font-weight: 500;
+		}
+	}
+}
+
+.comment {
+	
+	&-list {
+		list-style: none;
+		overflow: hidden;
+		margin-left: 0;
+		.children {
+			margin-left: 0;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			padding-left: 10px;
+			list-style: none;
+		
+			@include media-breakpoint-up(md) {
+				padding-left: 48px;
+			}
+		}
+		.comment,
+		.pingback,
+		.trackback,
+		.review {
+			margin-top: 30px;
+		}
+	}
+
+	&-body {
+		
+		&__holder {
+			position: relative;
+			display: flex;
+			align-items: flex-start;
+		}
+
+		.avatar {
+			margin-right: 16px;
+			border-radius: 50%;
+			@include media-breakpoint-down(sm) {
+				width: 40px;
+			}
+		}
+	}
+
+	&-meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 9px;
+		.comment-metadata{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			.comment-reply-link{
+				position: relative;
+				font-size: 14px;
+				margin-right: 20px;
+				@include media-breakpoint-up(sm) {
+					&:before{
+						content: '';
+						position: absolute;
+						left: -27px;
+						width: 1px;
+						height: 12px;
+						top: 50%;
+						transform: translateY(-50%);
+						background: #E3E3E3;
+					}
+				}
+			}
+		}
+		.fn {
+			margin-right: 20px;
+			font-size: 18px;
+			@include media-breakpoint-up(sm) {
+				margin-right: 60px;
+			}
+		}
+
+		.reply {
+			a:not(:empty) {
+				position: relative;
+				font-size: 14px;
+			}
+		}
+
+		.comment-date {
+			font-weight: 400;
+			font-size: 14px;
+		}
+	}
+
+	&-content {
+		p {
+			font-weight: 400;
+
+			strong {
+				display: inline-block;
+				margin-top: 20px;
+			}
+		}
+		ul > li {
+			position: relative;
+			ul > li{
+				&::marker{
+					font-size: 0;
+				}
+			}
+		}
+		ul li,
+		ol li{
+			margin-bottom: 13px;
+		} 
+	}
+
+	&-content-wrap {
+		flex: 1 1 200px;
+		max-width: 100%;
+		margin-top: -1px;
+	}
+
+	&-author {
+		flex-shrink: 0;
+	}
+}

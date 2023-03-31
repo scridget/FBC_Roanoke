@@ -1,0 +1,23 @@
+/**
+  * Theme Name: FBC Roanoke
+  * Theme URI: https://www.fbroanoke.org/
+  * Description: Child Theme of My Grace built by and for FBC Roanoke
+  * Author: Amber Brocato
+  * Template: mygrace
+  * Version: 1.0.0
+  * Text Domain: fbc_roanoke
+  * License: GNU General Public License v3 or later
+  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+.jet-services__button--icon-before svg path {
+  fill: inherit;
+}
+
+.jet-services .jet-services__icon path:last-child {
+  fill: inherit;
+}
+
+.elementor-24 .elementor-element.elementor-element-ca01370 .jet-menu .jet-menu-item.jet-current-menu-item .top-level-link {
+  color: #b2c280 !important;
+}

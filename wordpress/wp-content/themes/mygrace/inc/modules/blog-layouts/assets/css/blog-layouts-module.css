@@ -1,0 +1,235 @@
+/* Button */
+/*--------------------------------------------------------------
+# Animation
+--------------------------------------------------------------*/
+@-webkit-keyframes mygrace_spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes mygrace_spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*--------------------------------------------------------------
+## Blog layouts
+--------------------------------------------------------------*/
+/*-------------------
+### Default Styles
+---------------------*/
+.posts-list__item {
+  max-width: 950px;
+  margin: 0 auto;
+}
+.posts-list__item.default-item .posts-list__item-content .entry-content {
+  margin-bottom: 15px;
+}
+.posts-list__item.default-item.has-thumb .post-thumbnail {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+.posts-list__item.default-item.has-thumb .post-thumbnail a {
+  position: relative;
+  display: block;
+  padding-bottom: 69%;
+}
+.posts-list__item.default-item.has-thumb .post-thumbnail img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.posts-list__item.default-item.has-thumb .posts-list__item-content {
+  margin: -47px 10px 0 10px;
+}
+@media (min-width: 640px) {
+  .posts-list__item.default-item.has-thumb .posts-list__item-content {
+    margin: -57px 50px 20px 50px;
+  }
+}
+@media (min-width: 640px) {
+  .sidebar_enabled .posts-list__item.default-item.has-thumb .posts-list__item-content {
+    margin: -46px 37px 20px 37px;
+  }
+}
+.posts-list__item.default-item .sticky-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -3px 8px 0 0;
+}
+.posts-list__item.default-item .entry-header .entry-meta {
+  position: relative;
+  margin-bottom: 0;
+}
+.sidebar_enabled .posts-list__item.default-item .entry-header .entry-meta {
+  margin-bottom: 2px;
+}
+.posts-list__item.default-item .entry-header .entry-meta span.cat-links {
+  margin-bottom: 0;
+}
+.posts-list__item.default-item .entry-header .entry-meta span.cat-links a {
+  margin-bottom: 7px;
+}
+.posts-list__item.default-item .entry-header .entry-title {
+  margin-top: 0;
+}
+.sidebar_enabled .posts-list__item.default-item .entry-header .entry-title {
+  margin-bottom: 10px;
+}
+.posts-list__item.default-item .entry-footer {
+  margin: 0;
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+### Posts List Formats
+--------------------------------------------------------------*/
+.default-item.format-post .entry-footer .entry-meta .tags-links + div:not(:empty) {
+  margin-top: 28px;
+}
+.default-item.format-post .entry-footer .entry-meta > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+.default-item.format-post .entry-footer .entry-meta > div > * {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/*--------------------------------------------------------------
+### Grid Posts List
+--------------------------------------------------------------*/
+.posts-list.posts-list--grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+@media (max-width: 639px) {
+  .posts-list.posts-list--grid {
+    width: 100%;
+  }
+}
+.posts-list.posts-list--grid .grid-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+@media (min-width: 640px) {
+  .posts-list.posts-list--grid .grid-item {
+    margin-bottom: 2.2rem;
+  }
+}
+@media (min-width: 640px) {
+  .posts-list.posts-list--grid.posts-list-3-cols .grid-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100%/2 - 3rem);
+            flex: 0 0 calc(100%/2 - 3rem);
+    width: calc(100%/2 - 3rem);
+    max-width: calc(100%/2 - 3rem);
+  }
+}
+@media (min-width: 940px) {
+  .posts-list.posts-list--grid.posts-list-3-cols .grid-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100%/3 - 3rem);
+            flex: 0 0 calc(100%/3 - 3rem);
+    width: calc(100%/3 - 3rem);
+    max-width: calc(100%/3 - 3rem);
+  }
+}
+@media (min-width: 640px) {
+  .posts-list.posts-list--grid.posts-list-2-cols .grid-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100%/2 - 3rem);
+            flex: 0 0 calc(100%/2 - 3rem);
+    width: calc(100%/2 - 3rem);
+    max-width: calc(100%/2 - 3rem);
+  }
+}
+.posts-list.posts-list--grid .no-thumb {
+  border-bottom: 1px solid #F5F5F5;
+}
+.posts-list.posts-list--grid .no-thumb .posts-list__item-content {
+  display: block;
+  padding: 0 0 18px;
+  position: relative;
+}
+.posts-list.posts-list--grid .no-thumb + .no-thumb {
+  margin-bottom: 1.5rem;
+}
+.posts-list.posts-list--grid .sticky-label.type-icon {
+  margin: -3px 8px 0 0;
+}
+.posts-list.posts-list--grid .post-thumbnail a {
+  width: 100%;
+}
+.posts-list.posts-list--grid .post-thumbnail img {
+  width: 100%;
+  border-radius: 8px;
+}
+.posts-list.posts-list--grid .has-thumb .posts-list__item-content {
+  border: 0;
+  padding: 22px;
+  border-radius: 8px;
+  margin: -54px 10px 0 10px;
+  position: relative;
+}
+@media (min-width: 640px) {
+  .posts-list.posts-list--grid .has-thumb .posts-list__item-content {
+    margin: -54px 33px 0 33px;
+  }
+}
+.posts-list.posts-list--grid .entry-header .entry-title {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+.posts-list.posts-list--grid .entry-content {
+  margin-bottom: 8px;
+}
+.posts-list.posts-list--grid .entry-footer {
+  margin: 0;
+  padding: 0;
+}
+.posts-list.posts-list--grid .entry-footer .entry-meta {
+  margin-top: 10px;
+}
+.posts-list.posts-list--grid .entry-footer .entry-meta .tags-links {
+  width: 100%;
+}

@@ -1,0 +1,145 @@
+.site-footer {
+	&__wrap {
+		font-size: 14px;
+		
+		.space-between-content {
+			
+			&:not(:empty) {
+				padding-top: 91px;
+				padding-bottom: 91px;
+			}
+			
+			@include media-breakpoint-down(xs) {
+				display: block;
+				text-align: center;
+			}
+		}
+
+		.footer {
+			&-logo__link {
+				display: block;
+				margin-left: 0;
+				margin-right: 15px;
+				padding: 0;
+				letter-spacing: 0;
+				line-height: 1.2;
+				text-transform: lowercase;
+			}
+
+			&-copyright {
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 13px;
+				padding-top: 8px;
+				padding-bottom: 8px;
+			}
+
+			&-menu {
+				display: block;
+				padding-top: 8px;
+
+				li {
+					margin-right: 13px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer-area {
+	@include make-container();
+	@include make-container-max-widths();
+	display: flex;
+	flex-wrap: wrap;
+	>.widget {
+		width: 25%;
+	}
+}
+
+/* Newsletter Popup */
+.footer-newsletter-active {
+	position: fixed;
+	width: 100%;
+	padding-right: 17px;
+}
+
+.footer-newsletter-popup {
+	position: fixed;
+	z-index: 900;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	overflow: hidden;
+	background-color: transparent;
+	transform: scale(0);
+	transition: background-color 0.3s;
+
+	.footer-newsletter-active & {
+		background-color: #fff;
+		transform: scale(1);
+	}
+
+	&-close {
+		position: absolute;
+		right: 40px;
+		top: 34px;
+		width: 20px;
+		height: 20px;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		background: none;
+
+		.admin-bar & {
+			top: 66px;
+		}
+	}
+
+	&__inner{
+		margin: 0 auto;
+		width: 540px;
+		height: 100vh;
+		max-width: 90vw;
+		overflow-y: auto;
+		overflow-x: hidden;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		h3{
+			margin: 0 0 21px;
+			text-align: center;
+		}
+
+		.mc4wp-form {
+			width: 100%;
+
+			input:not([type="submit"]):not([type="checkbox"]) {
+				width: 100%;
+				margin-bottom: 10px;
+			}
+
+			&__checkbox_wrap {
+				margin-top: 20px;
+				
+				a {
+					display: inline-block;
+					vertical-align: middle;
+					padding-left: 7px;
+					line-height: 30px;
+					font-size: 14px;
+				}
+			}
+
+			input[type="submit"] {
+				width: 100%;
+			}
+		}
+	}
+}

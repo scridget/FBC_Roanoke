@@ -1,0 +1,33 @@
+/* #Footer */
+footer.site-footer {
+	background-image: linear-gradient(117deg, $footer_bg 72%, $accent_color_2 99%);
+}
+
+.footer-copyright {
+	color: $footer_text_color;
+}
+
+.footer-logo__link {
+	font-style: $header_logo_font_style;
+	font-weight: $header_logo_font_weight;
+	font-size: $header_logo_font_size{px};
+	color: $accent_color;
+}
+.footer-logo__link:hover {
+	color: $accent_color;
+}
+
+.footer-info__holder a {
+	color: $footer_text_color;
+}
+.footer-info__holder a:hover {
+	color: $primary_text_color;
+}
+
+/* Newsletter Popup */
+.footer-newsletter-popup__inner .mc4wp-form__checkbox_wrap a{
+	color: $primary_text_color;
+}
+.footer-newsletter-popup__inner .mc4wp-form__checkbox_wrap a:hover{
+	color: $accent_color;
+}

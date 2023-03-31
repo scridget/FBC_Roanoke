@@ -1,0 +1,26 @@
+/**
+ * Prices
+ */
+
+// Grid product
+.price {
+	font-size: 16px;
+	display: block;
+	
+	ins, del {
+		line-height: 1;
+	}
+
+	ins {
+		font-style: normal;
+		border: none;
+		margin-left: 4px;
+	}
+
+	del {
+		text-decoration: none;
+		font-weight: 400;
+		font-size: 14px;
+	}
+
+}

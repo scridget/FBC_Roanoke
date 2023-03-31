@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+## Icons
+--------------------------------------------------------------*/
+
+.icon-svg {
+	line-height: 1em;
+	height: auto;
+	> path {
+		fill: #899296;
+		vertical-align: middle;
+	}
+	&__comments, &__tags, &__clock {
+		width: 12px;
+		height:	12px;
+		transform: translateY(1px);
+	}
+}
+
+
+%font-awesome-icon {
+	display: inline-block;
+	font: normal normal normal 14px/1 "Font Awesome 5 Free";
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin font-awesome-icon {
+	@extend %font-awesome-icon;
+}

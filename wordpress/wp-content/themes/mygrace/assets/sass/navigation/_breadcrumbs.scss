@@ -1,0 +1,36 @@
+.breadcrumbs {
+	.container-fullwidth {
+		@media ( min-width: 1025px ) {
+			max-width: 100%;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+	.row {
+		justify-content: space-between;
+		align-items: center;
+	}
+	&_items{
+		margin-top: 16px;
+	}
+	&_browse {
+		display: inline-block;
+		margin-right: .5em;
+	}
+	&_item {
+	    display: inline-block;
+	    font-size: 12px;
+	    max-width: 100%;
+		&_link {
+			display: block;
+			.invert & {
+				&:hover {
+					color: inherit;
+				}
+			}
+		}
+		&:not(:last-child){
+	   	 	margin-right: 3px;
+		}
+	}
+}

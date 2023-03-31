@@ -1,0 +1,19 @@
+/* Grid Posts List */
+
+
+/* Posts List Grid Item Invert */
+.grid-item-wrap.invert,
+.grid-item-wrap.invert .posted-on,
+.grid-item-wrap.invert .cat-links,
+.grid-item-wrap.invert .byline,
+.grid-item-wrap.invert .tags-links,
+.grid-item-wrap.invert .entry-meta,
+.grid-item-wrap.invert a,
+.grid-item-wrap.invert .btn-icon,
+.grid-item-wrap.invert .comments-button {
+	color: $invert_text_color;
+}
+
+.posts-list.posts-list--grid .posted-by a:not(:hover){
+	color: $primary_text_color;
+}

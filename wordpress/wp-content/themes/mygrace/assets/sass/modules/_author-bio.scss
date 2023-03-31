@@ -1,0 +1,55 @@
+.post-author {
+	&-bio {
+		margin-top: 37px;
+	}
+
+	&__holder {
+		position: relative;
+		padding: 25px;
+		border-radius: 8px;
+    	overflow: hidden;
+
+		@include media-breakpoint-up(md) {
+			display: flex;
+			padding: 50px;
+		}
+		.sharebox_content{
+			margin-top: 33px;
+
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__avatar {
+		min-width: 120px;
+		margin-bottom: 20px;
+
+		@include media-breakpoint-up(md) {
+			margin: 0 32px 0 0;
+		}
+
+		.avatar {
+			vertical-align: top;
+			border-radius: 50%;
+		}
+	}
+	
+	&__title {
+		margin: 25px 0 6px;
+	}
+	
+	&__role {
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 12px;
+	}
+}

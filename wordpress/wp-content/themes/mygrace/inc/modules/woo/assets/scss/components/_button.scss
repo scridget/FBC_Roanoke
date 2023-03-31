@@ -1,0 +1,70 @@
+/**
+ * Buttons
+ */
+.button {
+	padding: 12px 56px;
+    text-transform: uppercase;
+    overflow: hidden;
+
+	&.add_to_cart_button,
+	&.product_type_variable,
+	&.product_type_grouped,
+	&.product_type_external{
+		position: relative;
+		padding: 12px 0;
+    	display: block;
+    	border-radius: 30px;
+	}
+	
+	// loading state
+	&.ajax_add_to_cart.loading {
+	.button-text,
+		&:before {
+			opacity: 0;
+		}
+		
+		&:after {
+			display: inline-block;
+			@extend %icon-font-default;
+			content: $wc-add-to-cart-loading-icon;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top: -7px;
+			margin-left: -5px;
+			font-size: $wc-add-to-cart-icon-fz;
+			line-height: $wc-add-to-cart-icon-lh;
+			transition: .3s all ease;
+			
+			@include spin-animation;
+		}
+	}
+	
+	// added state
+	&.ajax_add_to_cart.added {
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: top;
+			width: 12px;
+			height: 12px;
+			margin-right: 10px;
+		    margin-top: 4px;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			mask-image: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6.57382L4.41585 9.5L11 1.5" stroke="white" stroke-width="2.5"/></svg>');
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6.57382L4.41585 9.5L11 1.5" stroke="white" stroke-width="2.5"/></svg>');
+			transition: background-color 0.2s ease-out
+		}
+	}
+}
+
+.added_to_cart {
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 10px;
+	padding: $wc-button-indents;
+	border-radius: $wc-button-border-radius;
+}

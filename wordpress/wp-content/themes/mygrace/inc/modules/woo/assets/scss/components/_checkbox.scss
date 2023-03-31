@@ -1,0 +1,37 @@
+/**
+ *  Checkbox
+ */
+label.checkbox,
+label.inline,
+label.woocommerce-form-login__rememberme{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	&.woocommerce-form__label {
+    	padding: 2px 15px 0 30px;
+    	margin: 0;
+	}
+	input[type="checkbox"] {
+		display: none;
+	}
+	input[type="checkbox"] + span::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		width: 22px;
+		height: 22px;
+		border-radius: 5px;
+	}
+	input[type="checkbox"] + span::after {
+		opacity: 0;
+		position: absolute;
+		left: 4px;
+		width: 14px;
+		content: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEuNDkwOTMgMy40OTc1NEw2LjcwOTIgOS4xNzAzMkw1LjIxODI3IDEwLjc5MTFMMCA1LjExODM0TDEuNDkwOTMgMy40OTc1NFoiIGZpbGw9IndoaXRlIi8+PHBhdGggZD0iTTEyLjUwOTEgMEwzLjg4MTM0IDkuMzc5MjFMNS4zNzIyNyAxMUwxNCAxLjYyMDc5TDEyLjUwOTEgMFoiIGZpbGw9IndoaXRlIi8+PC9zdmc+);
+	}
+	input[type="checkbox"]:checked + span::after {
+		opacity: 1;
+	}
+}

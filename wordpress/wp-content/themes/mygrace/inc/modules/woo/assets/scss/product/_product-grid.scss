@@ -1,0 +1,140 @@
+/**
+ * Product grid styles
+ */
+ $transition: cubic-bezier(0.485, 0.115, 0.410, 0.880);
+
+.products.products-grid{
+	
+	.product {
+		display: flex;
+	    flex-wrap: wrap;
+	    width: 100%;
+		img{
+			width: 100%;
+			display: block;
+			border-radius: 8px;
+		}
+
+		&-content{
+			position: relative;
+			text-align: center;
+		    width: 100%;
+			.product-categories{
+				margin: 0 0 -2px;
+				list-style: none;
+
+				li {
+					display: inline-block;
+					vertical-align: top;
+					a {
+						display: block;
+						text-transform: uppercase;
+					}
+				}
+			}
+			
+			.woocommerce-loop-product__title{
+				margin: 0;
+				padding-bottom: 5px;
+				transition: padding 0.2s ease-in-out;
+			}
+			.added_to_cart {
+				display: none;
+			}
+			.product-content-desc{
+				display: flex;
+			    flex-wrap: wrap;
+			    flex-direction: column;
+			    justify-content: flex-start;
+				position: relative;
+    			padding: 10px;
+    			@include media-breakpoint-up(sm) {
+					padding: 16px 0 10px;
+				}
+				min-height: 120px;
+				.product-description{
+					overflow: hidden;
+					opacity: 1;
+					position: relative;
+					min-height: 65px;
+					> *{
+						&:nth-child(1){
+							transition: all 250ms $transition; /* ease-in */
+						};
+						&:nth-child(2){
+							transition: all 150ms $transition; /* ease-in */
+						};
+					}
+				}
+				.content-button{
+					position: absolute;
+				   	top: 0;
+				    left: 50%;
+				    transform: translate(-50%, 50px);
+				    width: 100%;
+				    transition: all 100ms $transition; /* ease-in */
+				    opacity: 0;
+					visibility: hidden;
+					margin-bottom: 5px;
+				}
+			}
+		}
+		.woocommerce-loop-product__link{
+			display: block;
+			margin-bottom: 0;
+		}
+		&:hover{
+			.product-content-desc{
+				.product-description > *{
+					transform: translateY(-50px);
+					opacity: 0;
+					visibility: hidden;
+					&:nth-child(1){
+						transition: all 150ms $transition; /* ease-in */
+					};
+					&:nth-child(2){
+						transition: all 250ms $transition; /* ease-in */
+					};
+				}
+				.content-button{
+					transition: all 350ms $transition; /* ease-in */
+					transform: translate(-50%, 0);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		};
+	}
+}
+
+.related.products {
+	h2 {
+		margin-bottom: 39px;
+		text-align: center;
+		position: relative;
+		padding-top: 85px;
+		&:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 71px;
+			height: 71px;
+			background: #FFF8E4;
+			border-radius: 50%;
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			top: 24px;
+			left: 50%;
+			z-index: 1;
+			transform: translateX(-50%);
+			width: 28px;
+			height: 28px;
+			mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 27 28" xmlns="http://www.w3.org/2000/svg"><path d="M25.65 1.4H21.6C21.6 0.626801 20.9732 0 20.2 0H6.8C6.0268 0 5.4 0.626801 5.4 1.4H1.35C0.54 1.4 0 1.96 0 2.8V6.16C0 9.38 2.295 12.04 5.4 12.46V12.6C5.4 16.66 8.1 20.02 11.745 20.86L10.8 23.8H7.695C7.155 23.8 6.615 24.22 6.48 24.78L5.84206 26.682C5.62476 27.3299 6.10681 28 6.79015 28H20.2098C20.8932 28 21.3752 27.3299 21.1579 26.682L20.52 24.78C20.385 24.22 19.845 23.8 19.305 23.8H16.2L15.255 20.86C18.9 20.02 21.6 16.66 21.6 12.6V12.46C24.705 12.04 27 9.38 27 6.16V2.8C27 1.96 26.46 1.4 25.65 1.4ZM5.4 9.66C3.915 9.24 2.7 7.84 2.7 6.16V4.2H5.4V9.66ZM16.2 14L13.5 12.46L10.8 14L11.475 11.2L9.45 8.4H12.285L13.5 5.6L14.715 8.4H17.55L15.525 11.2L16.2 14ZM24.3 6.16C24.3 7.84 23.085 9.38 21.6 9.66V4.2H24.3V6.16Z"/></svg>');
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 27 28" xmlns="http://www.w3.org/2000/svg"><path d="M25.65 1.4H21.6C21.6 0.626801 20.9732 0 20.2 0H6.8C6.0268 0 5.4 0.626801 5.4 1.4H1.35C0.54 1.4 0 1.96 0 2.8V6.16C0 9.38 2.295 12.04 5.4 12.46V12.6C5.4 16.66 8.1 20.02 11.745 20.86L10.8 23.8H7.695C7.155 23.8 6.615 24.22 6.48 24.78L5.84206 26.682C5.62476 27.3299 6.10681 28 6.79015 28H20.2098C20.8932 28 21.3752 27.3299 21.1579 26.682L20.52 24.78C20.385 24.22 19.845 23.8 19.305 23.8H16.2L15.255 20.86C18.9 20.02 21.6 16.66 21.6 12.6V12.46C24.705 12.04 27 9.38 27 6.16V2.8C27 1.96 26.46 1.4 25.65 1.4ZM5.4 9.66C3.915 9.24 2.7 7.84 2.7 6.16V4.2H5.4V9.66ZM16.2 14L13.5 12.46L10.8 14L11.475 11.2L9.45 8.4H12.285L13.5 5.6L14.715 8.4H17.55L15.525 11.2L16.2 14ZM24.3 6.16C24.3 7.84 23.085 9.38 21.6 9.66V4.2H24.3V6.16Z"/></svg>');
+		}
+	}
+}

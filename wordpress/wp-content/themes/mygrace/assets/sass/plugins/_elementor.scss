@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+## Carousel
+--------------------------------------------------------------*/
+
+.slick-slide {
+	&:focus {
+		outline: none;
+	}
+}
+.widget-posts-content .elementor-jet-posts .jet-carousel .jet-posts ul.jet-slick-dots{
+	margin: 0 auto;
+}
+.widget-posts-content .jet-posts__inner-content{
+	border-radius: 8px;
+	position: relative;
+	margin: -54px 31px 0px 31px;
+}
+
+.logo-hover .brands-list__item-img:hover{
+	filter: brightness(0.85);
+}
+
+.active-filters-label .jet-active-filter__label{
+	margin-right: 5px;
+}
+

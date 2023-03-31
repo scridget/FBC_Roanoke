@@ -1,0 +1,27 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+.sharebox_container.sharebox_content{
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.sharebox_container.sharebox_content svg{
+    height: 13px;
+    width: 13px;
+    fill: #202020;
+}
+.sharebox_container.sharebox_content a:not(:last-child){
+    margin-right: 9px;
+}
+.sharebox_container.sharebox_content a{
+	display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+}
+.sharebox_container.sharebox_content span:not(:empty){
+    font-size: 14px;
+    margin-right: 9px;
+}

@@ -1,0 +1,7 @@
+/* #Page preloader */
+.page-preloader-cover .bar:before{
+	background-color: $accent_color;
+}
+.page-preloader-cover .bar {
+	background-color: $grey_color_1;
+}

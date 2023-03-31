@@ -1,0 +1,88 @@
+/* #Breadcrumbs */
+
+.breadcrumbs .breadcrumbs_item,
+.breadcrumbs_item_link:hover{
+	color: $secondary_text_color;
+}
+.invert .breadcrumbs_item_link,
+.breadcrumbs_item_link {
+	color: $link_hover_color;
+}
+
+
+/* #Post navigation */
+.post-navigation .nav-links a{
+	background-color: $invert_text_color;
+}
+.post-navigation .nav-links .nav-prev a:not(:hover), 
+.post-navigation .nav-links .nav-next a:not(:hover),
+.post-navigation .archive-page-links:not(:hover){
+	color: $secondary_text_color;
+}
+
+/* Post Page Links */
+.page-links .post-page-numbers,
+.site-content .page-links{
+	color: $secondary_text_color;
+}
+.page-links .post-page-numbers:hover{
+	color: $invert_text_color;
+	background-color: $accent_color;
+}
+
+.comment-form .comment-notes,
+.comment-form-cookies-consent,
+.page-links .post-page-numbers.current{
+	color: $secondary_text_color;
+}
+
+label.checkbox input[type=checkbox] + span::before,
+label.woocommerce-form-login__rememberme input[type=checkbox] + span::before,
+.comment-form-cookies-consent label[for=wp-comment-cookies-consent]:before{
+	background-color: $grey_color_1;
+}
+
+
+/* #Pagination */
+.comment-navigation,
+.posts-navigation {
+	font-style: $h4_font_style;
+	font-weight: $h4_font_weight;
+	font-size: @font_size($h4_font_size, multiple, round, 0.8)px;
+	line-height: $h4_line_height;
+	font-family: @font_family( $h4_font_family );
+	letter-spacing: $h4_letter_spacing{em};
+	text-align: $h4_text_align;
+	text-transform: $h4_text_transform;
+	border-color: @alpha($primary_text_color, 10%);
+}
+
+/* #Posts List Pagination */
+.pagination a.page-numbers.prev,
+.pagination a.page-numbers.next,
+.pagination .page-numbers {
+	font-weight: $h5_font_weight;
+}
+.site-content .page-links .post-page-numbers.current,
+.pagination a:not(.next):not(.prev).page-numbers:hover,
+.pagination .page-numbers.current {
+	color: $invert_text_color;
+	background-color: $accent_color;
+}
+.pagination a.page-numbers.prev:hover,
+.pagination a.page-numbers.next:hover {
+	color: $accent_color;
+}
+
+.comment-navigation a:not(:hover),
+.posts-navigation a:not(:hover) {
+	color: $h4_color;
+}
+.comment-navigation a:hover,
+.posts-navigation a:hover {
+	color: $accent_color;
+}
+
+.post-navigation .nav-links__item:hover h4{
+	color: $link_hover_color;
+}

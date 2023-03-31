@@ -1,0 +1,176 @@
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	@include btn;
+}
+
+// Button styles
+.btn,
+.button {
+	text-decoration: none;
+	@include btn;
+
+	&.invert-button {
+		border: 1px solid $color__white;
+		background: none;
+	}
+}
+
+.link,
+.btn-link,
+.btn-icon {
+	font-size: 10px;
+	display: inline-block;
+	line-height: 1.5;
+	font-weight: 400;
+	text-transform: uppercase;
+	
+	svg {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 5px;
+		margin-top: 2px;
+		width: 9px;
+		height: 9px;
+	}
+
+	&.btn {
+		padding: 8px 17px 3px;
+		
+		svg{
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// General styles
+%btn {
+	display: inline-block;
+	max-width: 100%;
+	padding: 9px 23px;
+	cursor: pointer;
+	text-align: center;
+	overflow: hidden;
+	vertical-align: middle;
+	white-space: inherit;
+	text-transform: uppercase;
+	text-overflow: ellipsis;
+	border: 0;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 21px;
+	font-size: 14px;
+	transition: color 0.2s ease-out, background-color 0.2s ease-out;
+
+	&,
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+
+@mixin btn {
+	@extend %btn;
+}
+
+%btn-xs {
+	font-size: 10px;
+}
+
+%btn-sm {
+	font-weight: 400;
+	border-radius: 0;
+}
+
+.btn,
+form button,
+form input[type='button'],
+form input[type='reset'],
+form input[type='submit'] {
+	@include btn;
+
+	&.btn-fullwidth {
+		width: 100%;
+	}
+	&.btn-xs {
+		@extend %btn-xs;
+	}
+	&.btn-sm {
+		@extend %btn-sm;
+	}
+
+	&[class*="-transparent"] {
+		background-color: transparent;
+	}
+
+	i { margin-left: 5px; }
+}
+
+.btn-initial {
+	padding: 0;
+	font: inherit;
+	text-transform: none;
+	border-radius: 30px;
+	box-shadow: none;
+	overflow: visible;
+
+	&,
+	&:hover {
+		color: inherit;
+		background: none;
+	}
+}
+
+//	Block: Button
+.wp-block {
+	
+	&-button {
+		margin: 1rem 0;
+
+		&__link {
+			padding: 9px 23px;
+			text-transform: uppercase;
+			font-weight: 700;
+			line-height: 1.5;
+			font-size: 14px;
+		}
+	}
+
+	&-file {
+		.wp-block-file__button {
+		    padding: 9px 23px;
+		    text-transform: uppercase;
+		    font-weight: 700;
+		    line-height: 1.5;
+		    font-size: 14px;
+		    display: inline-block;
+		    margin: 0;
+		}
+		> a:first-child{
+			display: block;
+			margin: 0 20px 20px 0;
+		}
+	}
+
+	.is-style-outline & {
+		
+		&-button__link {
+			padding: 9px 23px;
+		}
+	}
+
+	.is-style-squared & {
+		
+		&-button__link {
+			border-radius: 0;
+		}
+	}
+}

@@ -1,0 +1,149 @@
+/**
+ * Single product reviews
+ */
+.woocommerce-Reviews {
+	ol.commentlist {
+		list-style: none;
+		margin: 0 0 50px;
+		padding: 0;
+
+		img {
+			margin: 0 15px 5px 0;
+		}
+
+		li {
+			
+			.comment_container {
+				position: relative;
+				display: flex;
+    			align-items: flex-start;
+			}
+
+			.avatar {
+				width: 60px;
+				border-radius: 50%;
+			}
+
+			.comment-text {
+				padding-top: 4px;
+				font-weight: 400;
+			}
+
+			.star-rating {
+				margin: 0px 19px -2px 0;
+    			display: inline-block;
+			}
+
+			.meta {
+				font-size: 14px;
+    			display: inline-block;
+			}
+			.description{
+				padding-top: 7px;
+			}
+
+			& + li {
+				margin-top: 20px;
+			    padding-top: 20px;
+			}
+		}
+	}
+
+	.comment-respond{
+		.comment-reply-title{
+			display: block;
+		}
+	}
+
+	#comments + #review_form_wrapper {
+		margin-top: 55px;
+	}
+}
+
+/*     single product comment form       */
+#review_form {
+	
+	.comment-reply-title {
+		margin-bottom: 20px;
+	}
+
+	.comment-form {
+
+		.comment-notes {
+			margin-bottom: 23px;
+		}
+		
+		.comment-form-rating {
+			margin-bottom: 30px;
+			.stars {
+				margin: 0;
+			}
+		}
+
+		&-comment {
+			margin-bottom: 11px;
+		}
+
+		&-author,
+		&-email {
+			float: none;
+			@include media-breakpoint-up(sm) {
+				display: inline-block;
+				width: 50%;
+				padding-right: 15px;
+				padding-left: 0;
+			}
+
+			input {
+				width: 100%;
+				padding-bottom: 8px;
+				text-transform: none;
+			}
+		}
+
+		&-email {
+			@include media-breakpoint-up(sm) {
+				margin-left: -5px;
+				padding-left: 15px;
+				padding-right: 0;
+			}
+		}
+
+		&-comment {
+			
+			textarea {
+				width: 100%;
+				height: 100px;
+				min-height: 100px;
+				text-transform: none;
+			}
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-size: 14px;
+		}
+
+		&-cookies-consent {
+			margin-top: -9px;
+			margin-left: 0;
+			margin-right: 0;
+
+			label {
+				margin-bottom: 0;
+			}
+		}
+
+		.form-submit {
+			margin-top: 30px;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+.product-rating__content .product-rating__wrapper-active {height: 20px;}
+
+
+

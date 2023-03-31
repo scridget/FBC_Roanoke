@@ -1,0 +1,67 @@
+ul,
+ol {
+	margin: 0 0 1.5em 1.5em;
+	padding-right:0;
+	padding-left: 0;
+
+	.entry-content &,
+	.page-content & {
+		li {
+			margin-bottom: 15px;
+		}
+
+		ul{
+			padding-left: 0;
+			margin-left: 22px;
+		}
+		ol{
+			margin-left: 22px;
+		}
+	}
+
+	.wp-block-column & {
+		margin-left: 35px;
+	}
+}
+ul,
+ol {
+	font-weight: 500;
+
+	&[id],
+	&[class],
+	&.inherit-list {
+		font-weight: 500;
+	}
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-top: 13px;
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* Inline list */
+.inline-list {
+	@include reset-list;
+	li {
+		display: inline-block;
+		vertical-align: top;
+	}
+}

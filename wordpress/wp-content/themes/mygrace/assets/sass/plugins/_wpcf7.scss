@@ -1,0 +1,299 @@
+$loader-width: 20px;
+$loader-border-width: 3px;
+
+.wpcf7 {
+	.ajax-loader {
+		position: relative;
+		border-radius: 50%;
+		width: $loader-width;
+		height: $loader-width;
+		border: $loader-border-width solid transparent;
+		margin: 0 15px;
+		background: none;
+		animation: tm_spin 1s linear infinite;
+		z-index: 11;
+	}
+
+	&-form-control-wrap {
+		position: relative;
+		display: block;
+		input {
+			width: 100%;
+		}
+	}
+
+	&-response-output {
+		font-size: 14px;
+		margin: 1em 0;
+	}
+
+	&-validation-errors,
+	&-mail-sent-ng,
+	&-mail-sent-ok {
+		padding: 0;
+		border: none;
+	}
+
+	input[type="submit"],
+	input[type="reset"],
+	button {
+		vertical-align: middle;
+	}
+
+	&-form {
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	input[type='radio'],
+	input[type='checkbox'] {
+		width: auto;
+	}
+
+	input[type='text'],
+	input[type='email'],
+	input[type='url'],
+	input[type='password'],
+	input[type='search'],
+	input[type='tel'],
+	textarea {
+		border: none;
+		border-bottom: 1px solid;
+		background-color: transparent;
+		padding: 15px 0 3px;
+		font-size: 18px;
+
+		.invalid & {
+			padding-right: 180px;
+		}
+	}
+
+	&-form.invalid{
+		input[type='text'],
+		input[type='email'],
+		input[type='url'],
+		input[type='password'],
+		input[type='search'],
+		input[type='tel'],
+		textarea {
+			padding-right: 180px;
+		}
+	}
+
+	textarea {
+		$height: 90px;
+
+		height: $height;
+		min-height: $height;
+	}
+}
+
+@keyframes tm_spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Checkbox */
+.contact-form .contact-form-checkbox input[type="checkbox"] {
+	display: none;
+}
+
+.contact-form .contact-form-checkbox {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.contact-form .contact-form-checkbox .wpcf7-list-item {
+	margin: 0;
+}
+
+body .contact-form .contact-form-checkbox .wpcf7-form-control.wpcf7-acceptance .wpcf7-list-item label .wpcf7-list-item-label,
+body .contact-form .contact-form-checkbox .wpcf7-form-control.wpcf7-acceptance .wpcf7-list-item label .wpcf7-list-item-label a {
+	vertical-align: middle;
+}
+
+.contact-form .contact-form-checkbox label span::before {
+	content: "";
+	position: relative;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	margin-right: 10px;
+	margin-bottom: -7px;
+	background-color: rgba(107, 147, 167, 0.1);
+}
+
+.contact-form .contact-form-checkbox label:hover span::before {
+	border: 1px solid #084b6d;
+}
+
+.contact-form .contact-form-checkbox label input[type="checkbox"]:checked ~ span::before {
+	background-color: #ff668c;
+	border: none;
+}
+
+.contact-form .contact-form-checkbox label input[type="checkbox"]:checked ~ span::after {
+	content: "";
+	position: absolute;
+	left: 5px;
+	top: 7px;
+	width: 12px;
+	height: 7px;
+	border-left: 2px solid #ffffff;
+	border-bottom: 2px solid #ffffff;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/*Columns in contact forms*/
+.cf-container {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -20px;
+	margin-left: -20px;
+}
+
+.cf-col-1,
+.cf-col-2,
+.cf-col-3,
+.cf-col-4,
+.cf-col-5,
+.cf-col-6,
+.cf-col-7,
+.cf-col-8,
+.cf-col-9,
+.cf-col-10,
+.cf-col-11,
+.cf-col-12 {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+@media (min-width: 767px) {
+	.cf-col-1 {
+		-ms-flex: 0 0 8.333333%;
+		flex: 0 0 8.333333%;
+		max-width: 8.333333%;
+	}
+
+	.cf-push-1 {
+		margin-left: 8.333333%;
+	}
+
+	.cf-col-2 {
+		-ms-flex: 0 0 16.66667%;
+		flex: 0 0 16.66667%;
+		max-width: 16.66667%;
+	}
+
+	.cf-push-2 {
+		margin-left: 16.66667%;
+	}
+
+	.cf-col-3 {
+		-ms-flex: 0 0 25%;
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
+
+	.cf-push-3 {
+		margin-left: 25%;
+	}
+
+	.cf-col-4 {
+		-ms-flex: 0 0 33.33333%;
+		flex: 0 0 33.33333%;
+		max-width: 33.33333%;
+	}
+
+	.cf-push-4 {
+		margin-left: 33.33333%;
+	}
+
+	.cf-col-5 {
+		-ms-flex: 0 0 41.66667%;
+		flex: 0 0 41.66667%;
+		max-width: 41.66667%;
+	}
+
+	.cf-push-5 {
+		margin-left: 41.66667%;
+	}
+
+	.cf-col-6 {
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.cf-push-6 {
+		margin-left: 50%;
+	}
+
+	.cf-col-7 {
+		-ms-flex: 0 0 58.33333%;
+		flex: 0 0 58.33333%;
+		max-width: 58.33333%;
+	}
+
+	.cf-push-7 {
+		margin-left: 58.33333%;
+	}
+
+	.cf-col-8 {
+		-ms-flex: 0 0 66.66667%;
+		flex: 0 0 66.66667%;
+		max-width: 66.66667%;
+	}
+
+	.cf-push-8 {
+		margin-left: 66.66667%;
+	}
+
+	.cf-col-9 {
+		-ms-flex: 0 0 75%;
+		flex: 0 0 75%;
+		max-width: 75%;
+	}
+
+	.cf-push-9 {
+		margin-left: 75%;
+	}
+
+	.cf-col-10 {
+		-ms-flex: 0 0 83.33333%;
+		flex: 0 0 83.33333%;
+		max-width: 83.33333%;
+	}
+
+	.cf-push-10 {
+		margin-left: 83.33333%;
+	}
+
+	.cf-col-11 {
+		-ms-flex: 0 0 91.66667%;
+		flex: 0 0 91.66667%;
+		max-width: 91.66667%;
+	}
+
+	.cf-push-11 {
+		margin-left: 91.66667%;
+	}
+
+	.cf-col-12 {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,22 @@
+/**
+ * Product main styles
+ */
+.products{
+
+	a:focus{
+		outline: none;
+	}
+
+	.product{
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 2.5rem;
+		}
+	}
+}
+
+.single-product{
+	
+	.product > .row {
+		justify-content: space-between;
+	}
+}

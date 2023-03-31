@@ -1,0 +1,112 @@
+/* #Main Menu */
+.main-navigation a {
+	font-style: $menu_font_style;
+	font-weight: $menu_font_weight;
+	text-transform: $menu_text_transform;
+	font-size: $menu_font_size{px};
+	line-height: $menu_line_height;
+	font-family: @font_family( $menu_font_family );
+	letter-spacing: $menu_letter_spacing{px};
+}
+
+.main-navigation li:hover > a,
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	color: $accent_color;
+}
+
+.invert .main-navigation .sub-menu a:hover,
+.invert .main-navigation .sub-menu .current_page_item > a,
+.invert .main-navigation .sub-menu .current-menu-item > a,
+.invert .main-navigation .sub-menu .current_page_ancestor > a,
+.invert .main-navigation .sub-menu .current-menu-ancestor > a {
+	color: $accent_color;
+}
+
+.invert .main-navigation .sub-menu a{
+	color: $primary_text_color;
+}
+
+.invert .main-navigation li.menu-item-has-children > a:before,
+.invert .main-navigation li.menu-item-has-children > a:after {
+	background-color: $invert_text_color;
+}
+
+.invert .main-navigation .sub-menu li.menu-item-has-children > a:before,
+.invert .main-navigation .sub-menu li.menu-item-has-children > a:after,
+.main-navigation li.menu-item-has-children > a:before,
+.main-navigation li.menu-item-has-children > a:after {
+	background-color: $primary_text_color;
+}
+.invert .main-navigation .sub-menu li.menu-item-has-children:hover > a:before,
+.invert .main-navigation .sub-menu li.menu-item-has-children:hover > a:after,
+.main-navigation li.menu-item-has-children:hover > a:before,
+.main-navigation li.menu-item-has-children:hover > a:after,
+.main-navigation li.menu-item-has-children.current_page_item > a:before,
+.main-navigation li.menu-item-has-children.current_page_item > a:after,
+.main-navigation li.menu-item-has-children.current-menu-item > a:before,
+.main-navigation li.menu-item-has-children.current-menu-item > a:after,
+.main-navigation li.menu-item-has-children.current_page_ancestor > a:before,
+.main-navigation li.menu-item-has-children.current_page_ancestor > a:after,
+.main-navigation li.menu-item-has-children.current-menu-ancestor > a:before,
+.main-navigation li.menu-item-has-children.current-menu-ancestor > a:after {
+	background-color: $accent_color;
+}
+
+.main-navigation li.menu-item-has-children li:hover > a:before,
+.main-navigation li.menu-item-has-children li:hover > a:after,
+.main-navigation li.menu-item-has-children li.current_page_item > a:before,
+.main-navigation li.menu-item-has-children li.current_page_item > a:after,
+.main-navigation li.menu-item-has-children li.current-menu-item > a:before,
+.main-navigation li.menu-item-has-children li.current-menu-item > a:after,
+.main-navigation li.menu-item-has-children li.current_page_ancestor > a:before,
+.main-navigation li.menu-item-has-children li.current_page_ancestor > a:after,
+.main-navigation li.menu-item-has-children li.current-menu-ancestor > a:before,
+.main-navigation li.menu-item-has-children li.current-menu-ancestor > a:after {
+	background-color: $accent_color;
+}
+
+/* #Mobile Menu */
+.mobile-menu-toggle-button {
+	border-bottom-color: $primary_text_color;
+}
+.mobile-menu-toggle-button:before,
+.mobile-menu-toggle-button:after {
+	background-color: $primary_text_color;
+}
+
+.site-header__style-1.site-header__mobile .main-navigation__vertical .menu li .sub-menu > .menu-parent-item a,
+.site-header__style-3.site-header__mobile .main-navigation__vertical .menu li .sub-menu > .menu-parent-item a,
+.header-vertical-menu-popup .menu-toggle-close path{
+	color: $secondary_text_color;
+}
+
+.invert .site-header__style-1.site-header__mobile .menu-toggle-wrapper .menu-toggle-box,
+.invert .site-header__style-3.site-header__mobile .menu-toggle-wrapper .menu-toggle-box {
+	border-bottom-color: $invert_text_color;
+}
+.invert .site-header__style-1.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:before,
+.invert .site-header__style-3.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:before,
+.invert .site-header__style-1.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:after,
+.invert .site-header__style-3.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:after {
+	background-color: $invert_text_color;
+}
+
+.site-header__style-1.site-header__mobile .menu-toggle-wrapper .menu-toggle-box,
+.site-header__style-3.site-header__mobile .menu-toggle-wrapper .menu-toggle-box {
+	border-bottom-color: $primary_text_color;
+}
+.site-header__style-1.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:before,
+.site-header__style-3.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:before,
+.site-header__style-1.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:after,
+.site-header__style-3.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:after {
+	background-color: $primary_text_color;
+}
+
+.invert .site-header__style-1.site-header__mobile .main-navigation__vertical .menu li a, 
+.invert .site-header__style-3.site-header__mobile .main-navigation__vertical .menu li a{
+	color: $primary_text_color;
+}
+

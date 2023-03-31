@@ -1,0 +1,95 @@
+.site {
+	@include hyphens(auto);
+	
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	word-wrap: break-word;
+	&-content {
+		flex: auto;
+		width: 100%;
+		min-height: 1px;
+
+		body:not(.elementor-page) &,
+		body.single.elementor-page & {
+			margin-bottom: 0;
+			margin-top: 70px;
+
+			@include media-breakpoint-up(md) {
+				margin-top: 90px;
+			}
+		}
+
+		body.blog & {
+			margin-top: 75px;
+
+			@include media-breakpoint-up(sm) {
+				margin-top: 130px;
+			}
+		}
+
+		body.single-post & {
+			margin-top: 60px;
+
+			@include media-breakpoint-up(sm) {
+				margin-top: 100px;
+			}
+		}
+		&__wrap {
+			max-width: 100%;
+		}
+	}
+	
+	&-main {
+		>*:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+#primary {
+	margin-bottom: 70px;
+	@include media-breakpoint-up(md) {
+		margin-bottom: 130px;
+		.single-product & {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.space-between-content {
+	@include space-between-content;
+}
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+
+@import "primary/header";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+@import "primary/footer";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Single post
+--------------------------------------------------------------*/
+
+@import "primary/single-post";
+
+/*--------------------------------------------------------------
+## Sticky 
+--------------------------------------------------------------*/
+
+@import "primary/sticky";

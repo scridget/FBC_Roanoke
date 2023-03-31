@@ -1,0 +1,231 @@
+/* Widgets misc */
+.widget_recent_entries .post-date {
+	color: $secondary_text_color;
+}
+.textwidget p,
+.widget_calendar tbody td,
+.widget_calendar tbody td a{
+	color: $primary_text_color;
+}
+
+.widget_block .wp-block-page-list li a,
+.widget_block .wc-block-product-categories-list li a{
+	color: $primary_text_color;
+}
+
+.wp-block-archives-list li a:hover
+.wp-block-categories-list li a:hover{
+	color: $accent_color;
+}
+
+
+
+.post-author__holder .sharebox_container.sharebox_content a{
+	background-color: $invert_text_color;
+}
+.sharebox_container.sharebox_content a{
+	background-color: #FFF9F6;
+}
+.sharebox_container.sharebox_content a svg{
+	fill: $primary_text_color;
+}
+.sharebox_container.sharebox_content a:hover{
+	background-color: $link_hover_color;
+}
+.sharebox_container.sharebox_content a:hover svg{
+	fill: $invert_text_color;
+}
+
+
+
+/* Widget Text */
+.widget_text p.wp-caption-text {
+	color: $secondary_text_color;
+}
+
+/* #Widget Recent Posts - Comments*/
+
+.wp-block-latest-comments .recentcomments,
+.widget_recent_comments,
+.wp-block-latest-comments__comment-meta,
+.wp-block-latest-posts__post-author, 
+.wp-block-latest-posts__post-date{
+	color: $secondary_text_color;
+}
+.wp-block-latest-comments .comment-author-link a:hover {
+	color: $accent_color;
+}
+
+.invert .widget_recent_entries a:not(:hover),
+.invert .wp-block-latest-comments a:not(:hover) {
+	color: $invert_text_color;
+}
+
+.wp-block-latest-comments__comment-link,
+.widget_recent_comments ul li > a,
+.widget_mygrace_core_post_thumb a.recent_post_title,
+.wp-block-latest-posts.wp-block-latest-posts__list li a,
+.widget_rss ul li a.rsswidget,
+.widget_recent_entries ul li a{
+	line-height: $h6_line_height;
+	font-size: $body_font_size{px};
+	letter-spacing: $h6_letter_spacing{px};
+	font-weight: $h6_font_weight;
+}
+
+.widget_mygrace_core_post_thumb a.recent_post_title{
+	color: $primary_text_color;
+}
+.widget_mygrace_core_post_thumb a.recent_post_title:hover{
+	color: $accent_color;
+}
+
+.widget_mygrace_core_post_thumb .entry-meta{
+	color: $secondary_text_color;
+}
+
+.recentcomments,
+.wp-block-latest-comments__comment-meta,
+.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta,
+.wp-block-latest-comments__comment-date{
+	font-size: @font_size($body_font_size, multiple, ceil, 0.85)px;
+}
+.comment-author-link a,
+.wp-block-latest-comments li .wp-block-latest-comments__comment-author, 
+.wp-block-latest-posts li .wp-block-latest-comments__comment-author{
+	color: $secondary_text_color;
+}
+.comment-author-link a:hover,
+.wp-block-latest-comments li .wp-block-latest-comments__comment-author:hover, 
+.wp-block-latest-posts li .wp-block-latest-comments__comment-author:hover{
+	color: $link_hover_color;
+}
+
+/* #Widget RSS */
+.widget_rss ul li cite,
+.widget_rss ul li .rssSummary {
+	color: $primary_text_color;
+}
+.widget_rss ul li .rss-date {
+	color: $secondary_text_color;
+}
+
+
+/* #Widget Calendar */
+
+.wp-calendar-nav-prev a:before,
+.wp-calendar-nav-next a:before {
+	background-color: $primary_text_color;
+}
+.wp-calendar-nav-prev a:hover:before,
+.wp-calendar-nav-next a:hover:before {
+	background-color: $link_hover_color;
+}
+
+.widget_calendar tbody td#today,
+.widget_calendar tbody td#today a{
+	color: $invert_text_color;
+	background-color: $link_hover_color;
+}
+
+.widget_calendar tbody td a,
+.wp-block-calendar tbody td a{
+	background-color: $grey_color_2;
+}
+
+.widget_calendar tbody td a:hover,
+.wp-block-calendar tbody td a:hover {
+	color: $invert_text_color;
+	background-color: $link_hover_color;
+}
+
+.widget_categories ul li > a:before, 
+.widget_pages ul li > a:before, 
+.widget_archive ul li > a:before, 
+.widget_nav_menu ul li > a:before,
+.wp-block-archives-list li a:before, 
+.wp-block-categories-list li a:before{
+	background-color: $link_hover_color;
+}
+
+.widget_nav_menu li ul.sub-menu > li > a:not(:hover),
+.widget_pages ul li ul li > a:not(:hover), 
+.widget_archive ul li ul li > a:not(:hover), 
+.widget_categories ul li ul li > a:not(:hover), 
+.widget_archive ul li ul li > span, 
+.widget_categories ul li ul li > span{
+	color: $secondary_text_color;
+}
+
+/*--------------------------------------------------------------
+### WP blocks
+--------------------------------------------------------------*/
+
+.widget_block label,
+.wp-block-group__inner-container h2{
+	font-size: $h6_font_size{px};
+	letter-spacing: $h6_letter_spacing{px};
+	font-weight: $h6_font_weight;
+}
+
+.widget-title,
+.widget_block label,
+.page-header,
+.wp-block-group__inner-container h1, 
+.wp-block-group__inner-container h2, 
+.wp-block-group__inner-container h3, 
+.wp-block-group__inner-container h4, 
+.wp-block-group__inner-container h5, 
+.wp-block-group__inner-container h6{
+	border-bottom-color: $grey_color_2;
+}
+
+.widget-title:before,
+.widget_block label:before,
+.wp-block-group__inner-container h1:before, 
+.wp-block-group__inner-container h2:before, 
+.wp-block-group__inner-container h3:before, 
+.wp-block-group__inner-container h4:before, 
+.wp-block-group__inner-container h5:before, 
+.wp-block-group__inner-container h6:before{
+	background-image: linear-gradient(304deg, $link_hover_color 28%, $accent_color_2 81.99%);
+}
+
+.wp-block-search .wp-block-search__input{
+	border-color: $grey_color_1;
+}
+
+.search-form__submit.btn{
+	background: transparent;
+}
+.search-form__submit.btn path {
+	fill: $primary_text_color;
+}
+.search-form__submit.btn:hover path {
+	fill: $accent_color;
+}
+.wp-block-search__button:before,
+.wc-block-product-search__button:before,
+.widget_product_search form button:before{
+	background-color: $primary_text_color;
+}
+.wp-block-search__button:hover:before,
+.widget_product_search form button:hover:before,
+.wc-block-product-search__button:hover:before{
+	background-color: $accent_color;
+}
+
+.calendar_wrap caption,
+.wp-block-calendar caption{
+	background-color: $grey_color_2;
+}
+.wp-block-calendar table caption, 
+.wp-block-calendar table tbody{
+	color: $primary_text_color;
+}
+.wp-block-calendar table th,
+.calendar_wrap thead th{
+	background-color: $invert_text_color;
+	color: $secondary_text_color;
+}
+

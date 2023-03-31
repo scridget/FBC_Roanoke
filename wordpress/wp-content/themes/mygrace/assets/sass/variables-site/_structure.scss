@@ -1,0 +1,38 @@
+
+
+
+// Options
+$enable-rounded: true !default;
+$border__radius: 30px;
+
+// Box-shadow
+$box__shadow:        0 2px 12px rgba(136,136,136,0.26);
+$box__shadow_mobile: 0 2px 6px rgba(136,136,136,0.26);
+
+$box__shadow_2: 0 0 59px 0 rgba(66,71,76, 0.11);
+$box__shadow_3: 0 8px 59px 0 rgba(0, 0, 0, 0.1);
+
+
+// Input
+$input__indents: 8px 12px;
+
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+// Buttons
+$button__border-radius: $border__radius;
+$button__border: none;
+$button__box-shadow: none;
+
+// Embed ratio
+$embed__ratio: 56.25%;  //  thumbnail height / thumbnail width == 16x9
+
+// Site content indent
+$site-content-top-indent:    50px;
+$site-content-bottom-indent: 50px;
+
+// Transitions
+$bounce: .25s cubic-bezier(0.590, 0.150, 0.280, 1.650);
+
+// Mobile-vertical menu bg
+$mobile_menu_bg: rgba(17, 17, 17, .98);

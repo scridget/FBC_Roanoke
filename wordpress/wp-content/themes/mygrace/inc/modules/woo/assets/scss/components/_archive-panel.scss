@@ -1,0 +1,97 @@
+/**
+ * Archive panel
+ */
+
+.woocommerce-products-header{
+	
+	&__title.page-title {
+		margin-bottom: 41px;
+		text-align: center;
+
+		.archive.tax-product_cat & {
+			text-align: left;
+			margin-bottom: 36px;
+		}
+
+		#main & {
+			display: none;
+		}
+
+		#main .elementor-jet-woo-builder-products-page-title & {
+			display: block;
+		}
+	}
+
+	.page-description,
+	.term-description{
+		
+		#main & {
+			display: none;
+		}
+
+		#main .elementor-jet-woo-builder-products-page-title {
+			display: block;
+		}
+	}
+}
+
+.site-content__wrap {
+	.archive.woocommerce.position-one-left-sidebar &,
+	.archive.woocommerce.position-one-right-sidebar & {
+		padding-top: 0;
+	}
+}
+
+// Panel
+.woocommerce-products__panel {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0;
+	margin: 9px 0 0;
+	border: 0;
+	
+	&:empty{
+		display: none!important;
+	}
+
+	.woocommerce-result-count{
+		margin: 4px 0 11px;
+	}
+
+	.woocommerce-ordering {
+		margin-bottom: 20px;
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 11px;
+		}
+		position: relative;
+		display: flex;
+    	flex-direction: row-reverse;
+		select {
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+			position: relative;
+			background-image: none;
+			margin-right: 10px;
+		}
+		&:before{
+			content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEwIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNSA1TDkgMSIgc3Ryb2tlPSIjM0EzQTNBIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==');
+			margin-top: 2px;
+		};
+	}
+}
+
+.elementor-jet-woo-builder-products-ordering {
+	
+	.woocommerce-ordering {
+		
+		// Orderby
+		select.orderby {
+			order: 0;
+			vertical-align: top;
+			padding: 0;
+			background-color: transparent;
+		}
+	}
+}
